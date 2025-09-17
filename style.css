@@ -1,0 +1,181 @@
+* {
+    font-family: "Google Sans Code", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+#links a {
+    font-size: 1.6rem;
+}
+
+.quadrado {
+    width: 100%;
+    height: 15rem;
+    /* altura fixa */
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.barra-medicao {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+}
+
+.etapa {
+    flex: 1;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+.inicial {
+    background-color: #4caf50;
+}
+
+.intermediario {
+    background-color: #4caf50;
+}
+
+.avancado {
+    background-color: #4caf50;
+}
+
+.circulo {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    /* transforma em círculo */
+    display: inline-block;
+}
+
+/* Títulos opcionais */
+.titulo {
+    font-weight: 500;
+}
+
+/* TESTE */
+
+/* Força carousel-item a ter altura da imagem */
+.carousel-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+
+.carousel-item {
+    position: relative;
+}
+
+/* Setas sempre centralizadas em relação à imagem */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+/* Caption mobile abaixo da imagem */
+.carousel-caption.mobile-caption {
+    position: static;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 2.5rem;
+    text-align: center;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+    .pad-carrossel {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+}
+
+.cartaoProjeto {
+    border: 2px solid black;
+}
+
+.tituloCard {
+    border-bottom: 2px solid black;
+    padding: 0.4rem;
+}
+
+.descricaoCard {
+    border-top: 2px solid black;
+    text-align: justify;
+    padding: 0.6rem;
+}
+
+.linguagensCard {
+    border-top: 2px solid black;
+    font-size: 2rem;
+    padding: 0.6rem;
+}
+
+.imagem-fixa {
+    width: 25rem;
+    height: 150px;
+    object-fit: contain;
+}
+
+.imagem-pequena {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.projetoProfissional-card {
+    border: 2px solid black;
+}
+
+.projetoProfissional-imagem-pequena {
+    width: 100px;
+    height: 75px;
+    object-fit: contain;
+}
+
+.projetoProfissional-descricao {
+    border-top: 2px solid black;
+    padding: 0.6rem;
+    text-align: justify;
+    font-size: 0.9rem;
+}
+
+.projetoProfissional-linguagens {
+    border-top: 2px solid black;
+    padding: 0.6rem;
+}
+
+.projetoProfissional-titulo {
+    border-bottom: 2px solid black;
+}
+
+.progresso-card-curso{
+    font-size: 0.9rem;
+}
+
+.progresso-card-curso .descricaoProgresso{
+    margin-top: 0.4rem;
+}
+
+#footerPag {
+    background-color: black;
+    color: #FFFF;
+    padding: 1.5rem;
+}
+
+.iconesFooter{
+    font-size: 1.4rem;
+}
