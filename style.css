@@ -1,18 +1,207 @@
+/*
+ * SECTION: Variáveis CSS
+ * Define as cores e outras propriedades que podem ser alteradas.
+ */
+:root {
+    /* Modo Escuro */
+    --cor-fundo-claro: #24272B;
+    --cor-texto-claro: #E0E0E0;
+    --cor-borda-claro: #E0E0E0;
+    --cor-fundo-elemento-claro: #35393f;
+    --cor-fundo-carrossel: #E0E0E0;
+    --cor-menu: #004BA8;
+}
+
+.modo-claro {
+    /* Modo Claro */
+    --cor-fundo-claro: #fafafa;
+    --cor-texto-claro: #07070A;
+    --cor-borda-claro: #07070A;
+    --cor-fundo-elemento-claro: #e9e9e9;
+    --cor-fundo-carrossel: #24272B;
+    --cor-menu: #004BA8;
+}
+
+/*
+ * SECTION: Seletores Gerais
+ */
 * {
     font-family: "Google Sans Code", monospace;
     font-optical-sizing: auto;
     font-style: normal;
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    min-height: 100%;
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-texto-claro);
+}
+
+hr {
+    width: 100%;
+    height: 2px;
+    background-color: var(--cor-texto-claro);
+    border: none;
+    opacity: 100;
+}
+
+a {
+    color: #004BA8;
+}
+
+/* Força carousel-item a ter altura da imagem */
+.carousel-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Títulos opcionais */
+.titulo {
+    font-weight: 500;
+}
+
+/*
+ * SECTION: Seletores de ID
+ */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#inicio {
+    border: 2px solid var(--cor-borda-claro);
+    border-radius: 25px;
+    background-color: var(--cor-fundo-claro);
+    box-sizing: border-box;
+    width: 100vw;
+    height: 90vh;
 }
 
 #links a {
-    font-size: 1.6rem;
+    visibility: hidden;
+    font-size: 2rem;
 }
 
+a i {
+    transition: transform 0.3s ease-in-out;
+}
+
+a i:hover {
+    transform: scale(1.2);
+}
+
+#footerPag {
+    background-color: var(--cor-menu);
+    color: #f0f0f0;
+    padding: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+#footerPag a {
+    background-color: var(--cor-menu);
+    color: #f0f0f0;
+}
+
+/*
+ * SECTION: Conteúdo principal e layout
+ */
+body>.conteudo-principal {
+    position: relative;
+    z-index: 1;
+    min-height: 100%;
+}
+
+.conteudo-principal {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--cor-menu);
+    color: #f0f0f0;
+    border-color: var(--cor-menu);
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: var(--cor-menu);
+    transform: scale(1.05);
+}
+
+/*
+ * SECTION: Componentes de projetos/cartões
+ */
+.cartaoProjeto {
+    border: 2px solid var(--cor-borda-claro);
+    background-color: var(--cor-fundo-claro);
+}
+
+.tituloCard {
+    border-bottom: 2px solid var(--cor-borda-claro);
+    padding: 0.4rem;
+}
+
+.descricaoCard {
+    border-top: 2px solid var(--cor-borda-claro);
+    text-align: justify;
+    padding: 0.6rem;
+}
+
+.linguagensCard {
+    border-top: 2px solid var(--cor-borda-claro);
+    font-size: 2rem;
+    padding: 0.6rem;
+}
+
+.projetoProfissional-card {
+    border: 2px solid var(--cor-borda-claro);
+    background-color: var(--cor-fundo-claro);
+}
+
+.projetoProfissional-titulo {
+    border-bottom: 2px solid var(--cor-borda-claro);
+}
+
+.projetoProfissional-descricao {
+    border-top: 2px solid var(--cor-borda-claro);
+    padding: 0.6rem;
+    text-align: justify;
+    font-size: 0.9rem;
+}
+
+.projetoProfissional-linguagens {
+    border-top: 2px solid var(--cor-borda-claro);
+    padding: 0.6rem;
+}
+
+.progresso-card-curso {
+    font-size: 0.9rem;
+}
+
+.progresso-card-curso .descricaoProgresso {
+    margin-top: 0.4rem;
+}
+
+/*
+ * SECTION: Componentes de medida e progresso
+ */
 .quadrado {
     width: 100%;
     height: 15rem;
-    /* altura fixa */
-    background-color: #f0f0f0;
+    background-color: var(--cor-fundo-elemento-claro);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -48,35 +237,13 @@
     background-color: #4caf50;
 }
 
-.circulo {
-    width: 8rem;
-    height: 8rem;
-    border-radius: 50%;
-    /* transforma em círculo */
-    display: inline-block;
-}
-
-/* Títulos opcionais */
-.titulo {
-    font-weight: 500;
-}
-
-/* TESTE */
-
-/* Força carousel-item a ter altura da imagem */
-.carousel-item img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    display: block;
-}
-
-
+/*
+ * SECTION: Componentes de navegação e carrossel
+ */
 .carousel-item {
     position: relative;
 }
 
-/* Setas sempre centralizadas em relação à imagem */
 .carousel-control-prev,
 .carousel-control-next {
     position: absolute;
@@ -85,43 +252,49 @@
     z-index: 10;
 }
 
-/* Caption mobile abaixo da imagem */
 .carousel-caption.mobile-caption {
     position: static;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    background: var(--cor-fundo-carrossel);
+    color: var(--cor-fundo-claro);
     padding: 2.5rem;
     text-align: center;
     margin-top: 0.5rem;
     border-radius: 5px;
 }
 
-@media (min-width: 768px) {
-    .pad-carrossel {
-        padding-left: 6rem;
-        padding-right: 6rem;
-    }
+.tracker-nav {
+    background-color: var(--cor-menu);
+    color: #fafafa;
+    padding: 0.8rem;
 }
 
-.cartaoProjeto {
-    border: 2px solid black;
+.tracker-item {
+    text-decoration: none;
+    color: #fafafa;
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.tituloCard {
-    border-bottom: 2px solid black;
-    padding: 0.4rem;
+.tracker-item.active {
+    background-color: #3E78B2;
+    color: #fafafa;
+    font-weight: bold;
 }
 
-.descricaoCard {
-    border-top: 2px solid black;
-    text-align: justify;
-    padding: 0.6rem;
+.tracker-item:hover {
+    background-color: #3E78B2;
 }
 
-.linguagensCard {
-    border-top: 2px solid black;
-    font-size: 2rem;
-    padding: 0.6rem;
+/*
+ * SECTION: Imagens e ícones
+ */
+.circulo {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    display: inline-block;
 }
 
 .imagem-fixa {
@@ -136,46 +309,118 @@
     object-fit: cover;
 }
 
-.projetoProfissional-card {
-    border: 2px solid black;
-}
-
 .projetoProfissional-imagem-pequena {
     width: 100px;
     height: 75px;
     object-fit: contain;
 }
 
-.projetoProfissional-descricao {
-    border-top: 2px solid black;
-    padding: 0.6rem;
-    text-align: justify;
-    font-size: 0.9rem;
-}
-
-.projetoProfissional-linguagens {
-    border-top: 2px solid black;
-    padding: 0.6rem;
-}
-
-.projetoProfissional-titulo {
-    border-bottom: 2px solid black;
-}
-
-.progresso-card-curso{
-    font-size: 0.9rem;
-}
-
-.progresso-card-curso .descricaoProgresso{
-    margin-top: 0.4rem;
-}
-
-#footerPag {
-    background-color: black;
-    color: #FFFF;
-    padding: 1.5rem;
-}
-
-.iconesFooter{
+.iconesFooter {
     font-size: 1.4rem;
+}
+
+.imgResumo {
+    visibility: hidden;
+}
+
+#hrResumo {
+    visibility: hidden;
+}
+
+#nome {
+    min-height: 2rem;
+}
+
+#trabalho {
+    min-height: 1.5rem;
+}
+
+#links {
+    min-height: 2rem;
+}
+
+#descricao {
+    min-height: 10rem;
+}
+
+#indiceNav {
+    font-size: 0.90rem;
+}
+
+/*
+ * SECTION: Media Queries
+ */
+@media (min-width: 768px) {
+    .pad-carrossel {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+
+    .footerNormal {
+        display: block;
+    }
+
+    .footerMobile {
+        display: none;
+    }
+
+    .iconesFooterNormal {
+        display: block;
+        font-size: 1.3rem;
+    }
+
+    .iconesFooterMobile {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .palito {
+        display: none;
+    }
+
+    .footerNormal {
+        display: none;
+    }
+
+    .footerMobile {
+        display: block;
+    }
+
+    .iconesFooterMobile {
+        font-size: 1.5rem;
+        display: block;
+    }
+
+    .iconesFooterNormal {
+        display: none;
+    }
+
+    [data-aos][data-aos-delay] {
+        transition-delay: 0s !important;
+    }
+}
+
+@media (max-width: 1433px) {
+    #indiceNav {
+        font-size: 0.7rem;
+    }
+
+    #indiceNav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: .5rem;
+        margin-top: 1rem;
+    }
+
+
+    #inicio {
+        border: 3px solid var(--cor-borda-claro);
+        border-radius: 25px;
+        background-color: var(--cor-fundo-claro);
+        box-sizing: border-box;
+        width: 100vw;
+        height: 88vh;
+    }
 }
