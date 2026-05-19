@@ -29,6 +29,9 @@
     <!-- AOS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
+    <!-- TIPPY -->
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -53,22 +56,11 @@
                 <a href="#objetivosEstudos" class="tracker-item px-2">Objetivos e Estudos</a>
                 <a href="#experiencias" class="tracker-item px-2">Experiências</a>
                 <a href="#conhecimentos" class="tracker-item px-2">Conhecimentos</a>
-                <a href="#habilidades" class="tracker-item px-2">Habilidades</a>
+                <a href="#habilidades" class="tracker-item px-2">Soft Skills</a>
                 <a href="#cursosCertificacoes" class="tracker-item px-2">Cursos e Certificações</a>
             </div>
 
             <div class="d-flex gap-3 align-items-center flex-shrink-0">
-                <div class="dropdown">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <span id="selected-language-icon">🇧🇷</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#" data-lang="pt-br" data-icon="🇧🇷">🇧🇷</a></li>
-                        <li><a class="dropdown-item" href="#" data-lang="en" data-icon="🇺🇸">🇺🇸</a></li>
-                        <li><a class="dropdown-item" href="#" data-lang="es" data-icon="🇪🇸">🇪🇸</a></li>
-                    </ul>
-                </div>
                 <div>
                     <i class="fa-solid fa-moon toggleModoEscuro iconeModo"></i>
                 </div>
@@ -80,32 +72,9 @@
     <nav id="tracker-mobile" class="tracker-nav sticky-top d-lg-none">
         <div class="d-flex justify-content-between align-items-center">
             <div>
-                <span>Henrique de Freitas</span>
+                <span>Henrique Freitas</span>
             </div>
             <div class="d-flex gap-3 align-items-center">
-                <div class="dropdown">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <span id="selected-language-icon">🇧🇷</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a class="dropdown-item" href="#" data-lang="pt-br" data-icon="🇧🇷">
-                                🇧🇷
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#" data-lang="en" data-icon="🇺🇸">
-                                🇺🇸
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#" data-lang="es" data-icon="🇪🇸">
-                                🇪🇸
-                            </a>
-                        </li>
-                    </ul>
-                </div>
                 <div>
                     <i class="fa-solid fa-moon toggleModoEscuro iconeModo"></i>
                 </div>
@@ -163,103 +132,200 @@
                 <div class="col-md-4 mb-4">
                     <div class="projetoProfissional-card d-flex flex-column mb-4" data-aos="flip-right">
                         <div class="text-center projetoProfissional-titulo">
-                            <h4>Titulo</h4>
+                            <h4>Reestruturação da tela de pedidos</h4>
                         </div>
 
                         <div class="projetoProfissional-imagem d-flex justify-content-center">
-                            <img class="projetoProfissional-imagem-pequena"
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png">
+                            <img class="projetoProfissional-imagem-pequena" src="/assets/src/img/royal.jpg"
+                                alt="imagem_royalTecidos">
                         </div>
 
                         <div class="projetoProfissional-descricao flex-grow-1">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae dolorum distinctio
-                                illum vero eius doloremque quam recusandae nam minima, exercitationem repellat qui omnis
-                                officia quisquam aspernatur laboriosam sapiente. Harum, aliquid?</span>
+                            <span>
+                                Devido à necessidade de adaptar o estoque aos diferentes métodos de venda da empresa,
+                                foi realizada a reestruturação completa da tela de inserção de itens em pedidos. O
+                                projeto envolveu a criação de novas regras de negócio, validações e travas operacionais,
+                                garantindo maior segurança, estabilidade e eficiência no processo comercial.
+                            </span>
                         </div>
 
                         <div class="projetoProfissional-linguagens mt-auto">
-                            <div class="d-flex gap-1 justify-content-center">
-                                <i class="fa-brands fa-python"></i>
-                                <i class="fa-brands fa-python"></i>
-                                <i class="fa-brands fa-python"></i>
-                                <i class="fa-brands fa-python"></i>
+                            <div class="d-flex gap-2 justify-content-center">
+                                <i class="fa-brands fa-php" data-tippy-content="PHP"></i>
+                                <img src="/assets/src/img/database.png" data-tippy-content="MySQL">
+                                <i class="fa-brands fa-js" data-tippy-content="JavaScript"></i>
+                                <i class="fa-brands fa-html5" data-tippy-content="HTML5"></i>
+                                <i class="fa-brands fa-css3-alt" data-tippy-content="CSS3"></i>
+                                <i class="fa-brands fa-bootstrap" data-tippy-content="Bootstrap"></i>
+                                <i class="fa-brands fa-github" data-tippy-content="GitHub"></i>
                             </div>
                         </div>
                     </div>
 
                     <div class="projetoProfissional-card d-flex flex-column" data-aos="flip-right" data-aos-delay="200">
                         <div class="text-center projetoProfissional-titulo">
-                            <h4>Titulo</h4>
+                            <h4>Fluxo de liberação de venda</h4>
                         </div>
 
                         <div class="projetoProfissional-imagem d-flex justify-content-center">
-                            <img class="projetoProfissional-imagem-pequena"
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png">
+                            <img class="projetoProfissional-imagem-pequena" src="/assets/src/img/royal.jpg"
+                                alt="imagem_royalTecidos">
                         </div>
 
                         <div class="projetoProfissional-descricao flex-grow-1">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae dolorum
-                                distinctio</span>
+                            <span>
+                                Com o aumento da demanda de pedidos de venda, foi desenvolvido um fluxo integrado entre
+                                as rotinas de importação e a equipe comercial. A solução agilizou o processo de chegada
+                                de contêineres, liberação de pedidos e análise de crédito, reduzindo etapas manuais e
+                                melhorando o fluxo operacional da empresa.
+                            </span>
                         </div>
 
                         <div class="projetoProfissional-linguagens mt-auto">
-                            <div class="d-flex gap-1 justify-content-center">
-                                <i class="fa-brands fa-python"></i>
-                                <i class="fa-brands fa-python"></i>
-                                <i class="fa-brands fa-python"></i>
-                                <i class="fa-brands fa-python"></i>
+                            <div class="d-flex gap-2 justify-content-center">
+                                <i class="fa-brands fa-php" data-tippy-content="PHP"></i>
+                                <img src="/assets/src/img/database.png" data-tippy-content="MySQL">
+                                <i class="fa-brands fa-js" data-tippy-content="JavaScript"></i>
+                                <i class="fa-brands fa-html5" data-tippy-content="HTML5"></i>
+                                <i class="fa-brands fa-css3-alt" data-tippy-content="CSS3"></i>
+                                <i class="fa-brands fa-bootstrap" data-tippy-content="Bootstrap"></i>
+                                <i class="fa-brands fa-github" data-tippy-content="GitHub"></i>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-4 mb-4">
-                    <div class="projetoProfissional-card d-flex flex-column" data-aos="flip-right" data-aos-delay="200">
+                    <div class="projetoProfissional-card d-flex flex-column mb-4" data-aos="flip-right"
+                        data-aos-delay="200">
                         <div class="text-center projetoProfissional-titulo">
-                            <h4>Titulo</h4>
+                            <h4>Distribuição de pedidos</h4>
                         </div>
 
                         <div class="projetoProfissional-imagem d-flex justify-content-center">
-                            <img class="projetoProfissional-imagem-pequena"
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png">
+                            <img class="projetoProfissional-imagem-pequena" src="/assets/src/img/royal.jpg"
+                                alt="imagem_royalTecidos">
                         </div>
 
                         <div class="projetoProfissional-descricao flex-grow-1">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            <span>
+                                Foi desenvolvida uma tela responsável pela distribuição de pedidos entre
+                                lojas pertencentes ao mesmo grupo comercial. A solução respeita regras de negócio
+                                específicas da empresa, proporcionando maior organização logística, agilidade
+                                operacional e melhor gerenciamento dos itens distribuídos.
+                            </span>
                         </div>
 
                         <div class="projetoProfissional-linguagens mt-auto">
-                            <div class="d-flex gap-1 justify-content-center">
-                                <i class="fa-brands fa-python"></i>
-                                <i class="fa-brands fa-python"></i>
-                                <i class="fa-brands fa-python"></i>
-                                <i class="fa-brands fa-python"></i>
+                            <div class="d-flex gap-2 justify-content-center">
+                                <i class="fa-brands fa-php" data-tippy-content="PHP"></i>
+                                <img src="/assets/src/img/database.png" data-tippy-content="MySQL">
+                                <i class="fa-brands fa-js" data-tippy-content="JavaScript"></i>
+                                <i class="fa-brands fa-html5" data-tippy-content="HTML5"></i>
+                                <i class="fa-brands fa-css3-alt" data-tippy-content="CSS3"></i>
+                                <i class="fa-brands fa-bootstrap" data-tippy-content="Bootstrap"></i>
+                                <i class="fa-brands fa-github" data-tippy-content="GitHub"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projetoProfissional-card d-flex flex-column mb-4" data-aos="flip-right"
+                        data-aos-delay="200">
+                        <div class="text-center projetoProfissional-titulo">
+                            <h4>Tela para feira de roupas</h4>
+                        </div>
+
+                        <div class="projetoProfissional-imagem d-flex justify-content-center">
+                            <img class="projetoProfissional-imagem-pequena" src="/assets/src/img/royal.jpg"
+                                alt="imagem_royalTecidos">
+                        </div>
+
+                        <div class="projetoProfissional-descricao flex-grow-1">
+                            <span>
+                                Desenvolvimento de uma tela voltada para vendas em feiras de roupas, focada em alto
+                                desempenho e rapidez no atendimento. Para garantir estabilidade e fluidez durante o
+                                evento, foi utilizada uma base de dados auxiliar, evitando impactos de performance no
+                                sistema principal.
+                            </span>
+                        </div>
+
+                        <div class="projetoProfissional-linguagens mt-auto">
+                            <div class="projetoProfissional-linguagens mt-auto">
+                                <div class="d-flex gap-2 justify-content-center">
+                                    <i class="fa-brands fa-php" data-tippy-content="PHP"></i>
+                                    <img src="/assets/src/img/database.png" data-tippy-content="MySQL">
+                                    <i class="fa-brands fa-js" data-tippy-content="JavaScript"></i>
+                                    <i class="fa-brands fa-html5" data-tippy-content="HTML5"></i>
+                                    <i class="fa-brands fa-css3-alt" data-tippy-content="CSS3"></i>
+                                    <i class="fa-brands fa-bootstrap" data-tippy-content="Bootstrap"></i>
+                                    <i class="fa-brands fa-github" data-tippy-content="GitHub"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-4 mb-4">
-                    <div class="projetoProfissional-card d-flex flex-column" data-aos="flip-right" data-aos-delay="400">
+                    <div class="projetoProfissional-card d-flex flex-column mb-4" data-aos="flip-right"
+                        data-aos-delay="400">
                         <div class="text-center projetoProfissional-titulo">
-                            <h4>Titulo</h4>
+                            <h4>Reestruturação da tela de embarques</h4>
                         </div>
 
                         <div class="projetoProfissional-imagem d-flex justify-content-center">
-                            <img class="projetoProfissional-imagem-pequena"
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png">
+                            <img class="projetoProfissional-imagem-pequena" src="/assets/src/img/royal.jpg"
+                                alt="imagem_royalTecidos">
                         </div>
 
                         <div class="projetoProfissional-descricao flex-grow-1">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            <span>
+                                A antiga tela de embarques apresentava problemas de usabilidade, excesso de informações
+                                e dificuldades operacionais. Foi realizada uma reestruturação completa da planilha de
+                                embarque utilizando arquitetura MVC, tornando o processo mais organizado, intuitivo e
+                                eficiente para os departamentos responsáveis pela gestão e acompanhamento dos pedidos de
+                                compra.
+                            </span>
                         </div>
 
                         <div class="projetoProfissional-linguagens mt-auto">
-                            <div class="d-flex gap-1 justify-content-center">
-                                <i class="fa-brands fa-python"></i>
-                                <i class="fa-brands fa-python"></i>
-                                <i class="fa-brands fa-python"></i>
-                                <i class="fa-brands fa-python"></i>
+                            <div class="d-flex gap-2 justify-content-center">
+                                <i class="fa-brands fa-php" data-tippy-content="PHP"></i>
+                                <img src="/assets/src/img/database.png" data-tippy-content="MySQL">
+                                <i class="fa-brands fa-js" data-tippy-content="JavaScript"></i>
+                                <i class="fa-brands fa-html5" data-tippy-content="HTML5"></i>
+                                <i class="fa-brands fa-css3-alt" data-tippy-content="CSS3"></i>
+                                <i class="fa-brands fa-bootstrap" data-tippy-content="Bootstrap"></i>
+                                <i class="fa-brands fa-github" data-tippy-content="GitHub"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projetoProfissional-card d-flex flex-column mb-4" data-aos="flip-right"
+                        data-aos-delay="400">
+                        <div class="text-center projetoProfissional-titulo">
+                            <h4>Reestruturação do front-end home</h4>
+                        </div>
+
+                        <div class="projetoProfissional-imagem d-flex justify-content-center">
+                            <img class="projetoProfissional-imagem-pequena" src="/assets/src/img/cremesp.jpg"
+                                alt="imagem_royalTecidos">
+                        </div>
+
+                        <div class="projetoProfissional-descricao flex-grow-1">
+                            <span>
+                                Reestruturação completa do front-end da homepage do site do CREMESP, utilizando
+                                Bootstrap 5 e JavaScript moderno. O projeto teve como objetivo preparar a interface para
+                                a migração de sistema, entregando uma experiência mais atual, responsiva e alinhada às
+                                boas práticas de desenvolvimento web.
+                            </span>
+                        </div>
+
+                        <div class="projetoProfissional-linguagens mt-auto">
+                            <div class="d-flex gap-2 justify-content-center">
+                                <i class="fa-brands fa-js" data-tippy-content="JavaScript"></i>
+                                <i class="fa-brands fa-html5" data-tippy-content="HTML5"></i>
+                                <i class="fa-brands fa-css3-alt" data-tippy-content="CSS3"></i>
+                                <i class="fa-brands fa-bootstrap" data-tippy-content="Bootstrap"></i>
                             </div>
                         </div>
                     </div>
@@ -285,56 +351,66 @@
                 <div class="col-md-6 d-flex flex-column mb-4">
                     <div class="cartaoProjeto h-100 d-flex flex-column mb-4" data-aos="zoom-out">
                         <div class="text-center tituloCard">
-                            <a href="#">
-                                <h4>Titulo <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
+                            <a href="https://github.com/gabrielmaireno/Pro-Maquiller" target="_blank">
+                                <h4>Pro-Maquiller <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
                             </a>
                         </div>
 
                         <div class="imgCard d-flex justify-content-center">
-                            <img class="imagem-fixa"
-                                src="https://storage.googleapis.com/support-kms-prod/LDQn6R0HXMR5KjjgPySPjLD2gSUq3gcDufvl">
+                            <img class="imagem-fixa" src="/assets/src/img/ProMaquiller.png">
                         </div>
 
                         <div class="descricaoCard flex-grow-1">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae dolorum distinctio
-                                illum vero eius doloremque quam recusandae nam minima, exercitationem repellat qui omnis
-                                officia quisquam aspernatur laboriosam sapiente. Harum, aliquid?</span>
+                            <span>
+                                Software de detecção facial desenvolvido para identificar o tom de pele do usuário e
+                                compará-lo com diferentes opções de maquiagem, auxiliando na escolha da tonalidade mais
+                                natural e compatível. O projeto foi apresentado durante a Expo São Judas e recebeu
+                                destaque entre os trabalhos exibidos no evento.
+                            </span>
                         </div>
 
                         <div class="linguagensCard">
                             <div class="d-flex gap-4 justify-content-center">
-                                <i class="fa-brands fa-python"></i>
-                                <i class="fa-brands fa-python"></i>
-                                <i class="fa-brands fa-python"></i>
-                                <i class="fa-brands fa-python"></i>
+                                <i class="fa-brands fa-python" data-tippy-content="Python"></i>
+                                <i class="fa-brands fa-html5" data-tippy-content="HTML5"></i>
+                                <i class="fa-brands fa-css3-alt" data-tippy-content="CSS3"></i>
+                                <i class="fa-brands fa-github" data-tippy-content="GitHub"></i>
                             </div>
                         </div>
                     </div>
 
                     <div class="cartaoProjeto h-100 d-flex flex-column" data-aos="zoom-out" data-aos-delay="200">
                         <div class="text-center tituloCard">
-                            <a href="#">
-                                <h4>Titulo <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
+                            <a href="https://github.com/HickysDev/Batida_Certa" target="_blank">
+                                <h4>Batida Certa (Em desenvolvimento) <i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></h4>
                             </a>
                         </div>
 
                         <div class="imgCard d-flex justify-content-center">
-                            <img class="imagem-fixa"
-                                src="https://storage.googleapis.com/support-kms-prod/LDQn6R0HXMR5KjjgPySPjLD2gSUq3gcDufvl">
+                            <img class="imagem-fixa" src="/assets/src/img/relogio.png">
                         </div>
 
                         <div class="descricaoCard flex-grow-1">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae dolorum distinctio
-                                illum vero eius doloremque quam recusandae nam minima, exercitationem repellat qui omnis
-                                officia quisquam aspernatur laboriosam sapiente. Harum, aliquid?</span>
+                            <span>
+                                Sistema desenvolvido para auxiliar na organização e controle do relógio de ponto. O
+                                projeto utiliza uma biblioteca de calendário em JavaScript para registrar horários de
+                                entrada, saída para almoço, retorno e encerramento do expediente. Também conta com
+                                armazenamento em banco de dados MySQL, integração com PHP no back-end e comunicação via
+                                AJAX e jQuery. Futuramente, o sistema contará com geração de relatórios e cálculo
+                                automático de horas extras e horas devidas.
+                            </span>
                         </div>
 
                         <div class="linguagensCard">
                             <div class="d-flex gap-4 justify-content-center">
-                                <i class="fa-brands fa-python"></i>
-                                <i class="fa-brands fa-python"></i>
-                                <i class="fa-brands fa-python"></i>
-                                <i class="fa-brands fa-python"></i>
+                                <i class="fa-brands fa-php" data-tippy-content="PHP"></i>
+                                <img src="/assets/src/img/database.png" data-tippy-content="MySQL">
+                                <i class="fa-brands fa-js" data-tippy-content="JavaScript"></i>
+                                <i class="fa-brands fa-html5" data-tippy-content="HTML5"></i>
+                                <i class="fa-brands fa-css3-alt" data-tippy-content="CSS3"></i>
+                                <i class="fa-brands fa-bootstrap" data-tippy-content="Bootstrap"></i>
+                                <i class="fa-brands fa-github" data-tippy-content="GitHub"></i>
                             </div>
                         </div>
                     </div>
@@ -343,52 +419,63 @@
                 <div class="col-md-6 d-flex flex-column mb-4">
                     <div class="cartaoProjeto h-100 d-flex flex-column mb-4" data-aos="zoom-out" data-aos-delay="200">
                         <div class="text-center tituloCard">
-                            <a href="#">
-                                <h4>Titulo <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
+                            <a href="https://github.com/HickysDev/Sky_Finance" target="_blank">
+                                <h4>Sky Finance (Em desenvolvimento) <i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i></h4>
                             </a>
                         </div>
 
                         <div class="imgCard d-flex justify-content-center">
-                            <img class="imagem-fixa"
-                                src="https://storage.googleapis.com/support-kms-prod/LDQn6R0HXMR5KjjgPySPjLD2gSUq3gcDufvl">
+                            <img class="imagem-fixa" src="/assets/src/img/skyFinance.png">
                         </div>
 
                         <div class="descricaoCard flex-grow-1">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            <span>
+                                Plataforma de organização financeira voltada para controle pessoal de gastos e cartões
+                                de crédito. O sistema permite cadastrar cartões, definir datas de fechamento de fatura,
+                                registrar despesas em crédito e débito, além de visualizar resumos financeiros e
+                                acompanhamentos mensais. O projeto foi desenvolvido utilizando PHP, MySQL, jQuery e
+                                AJAX.
+                            </span>
                         </div>
 
                         <div class="linguagensCard">
                             <div class="d-flex gap-4 justify-content-center">
-                                <i class="fa-brands fa-python"></i>
-                                <i class="fa-brands fa-python"></i>
-                                <i class="fa-brands fa-python"></i>
-                                <i class="fa-brands fa-python"></i>
+                                <i class="fa-brands fa-php" data-tippy-content="PHP"></i>
+                                <img src="/assets/src/img/database.png" data-tippy-content="MySQL">
+                                <i class="fa-brands fa-js" data-tippy-content="JavaScript"></i>
+                                <i class="fa-brands fa-html5" data-tippy-content="HTML5"></i>
+                                <i class="fa-brands fa-css3-alt" data-tippy-content="CSS3"></i>
+                                <i class="fa-brands fa-bootstrap" data-tippy-content="Bootstrap"></i>
+                                <i class="fa-brands fa-github" data-tippy-content="GitHub"></i>
                             </div>
                         </div>
                     </div>
 
                     <div class="cartaoProjeto h-100 d-flex flex-column" data-aos="zoom-out" data-aos-delay="400">
                         <div class="text-center tituloCard">
-                            <a href="#">
-                                <h4>Titulo <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
+                            <a href="https://github.com/HickysDev/cinemaA3" target="_blank">
+                                <h4>Aplicativo de Cinema <i class="fa-solid fa-arrow-up-right-from-square"></i></h4>
                             </a>
                         </div>
 
                         <div class="imgCard d-flex justify-content-center">
-                            <img class="imagem-fixa"
-                                src="https://storage.googleapis.com/support-kms-prod/LDQn6R0HXMR5KjjgPySPjLD2gSUq3gcDufvl">
+                            <img class="imagem-fixa" src="/assets/src/img/cinema.jpg">
                         </div>
 
                         <div class="descricaoCard flex-grow-1">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            <span>
+                                Aplicativo desenvolvido com o objetivo de facilitar a busca por filmes em cartaz nos
+                                cinemas mais próximos da localização do usuário. Após realizar o login e informar o CPF,
+                                o sistema exibe os filmes disponíveis em cinemas da região, proporcionando uma
+                                experiência prática e personalizada. O projeto foi desenvolvido para apresentação na
+                                Expo São Judas.
+                            </span>
                         </div>
 
                         <div class="linguagensCard">
                             <div class="d-flex gap-4 justify-content-center">
-                                <i class="fa-brands fa-python"></i>
-                                <i class="fa-brands fa-python"></i>
-                                <i class="fa-brands fa-python"></i>
-                                <i class="fa-brands fa-python"></i>
+                                <i class="fa-brands fa-java" data-tippy-content="Java"></i>
                             </div>
                         </div>
                     </div>
@@ -396,7 +483,7 @@
             </div>
 
             <div class="text-center" data-aos="zoom-in" data-aos-delay="200">
-                <button class="btn btn-sm btn-primary">Ver mais...</button>
+                <a class="btn btn-sm btn-primary" href="https://github.com/HickysDev" target="_blank">Ver mais...</a>
             </div>
         </div>
 
@@ -414,17 +501,20 @@
                 <div class="col-md-6 mt-4">
                     <div class="d-flex justify-content-center align-items-center text-center h-100">
                         <span>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt eveniet necessitatibus
-                            blanditiis est quibusdam libero reprehenderit perspiciatis expedita, harum fugit temporibus
-                            quam itaque in amet illum, consectetur modi aliquid culpa. Deserunt eveniet necessitatibus
-                            blanditiis est quibusdam libero reprehenderit perspiciatis expedita, harum fugit temporibus
-                            quam itaque in amet illum, consectetur modi aliquid culpa.
+                            <p>
+                                Desde que comecei na programação, sempre gostei de transformar ideias e problemas em
+                                soluções reais. Poucas coisas são tão satisfatórias quanto resolver desafios,
+                                encontrar a causa de um problema em um sistema ou desenvolver funcionalidades que
+                                realmente façam diferença no dia a dia. Tenho grande interesse em desenvolvimento web,
+                                criação de interfaces e automação de processos, buscando constantemente aprender novas
+                                tecnologias, aprimorar minhas habilidades e evoluir como desenvolvedor.
+                            </p>
                         </span>
                     </div>
                 </div>
                 <div class="col-md-6 mt-4">
                     <div class="d-flex justify-content-center align-items-center text-center h-100">
-                        <img src="assets/src/img/sobreMim.png" class="rounded img-fluid"
+                        <img src="assets/src/img/fotoPortifolio.png" class="rounded img-fluid"
                             style="max-width: 90%; height: auto; object-fit: contain;">
                     </div>
                 </div>
@@ -447,11 +537,13 @@
                 <div class="col-md-6 mt-4">
                     <div class="d-flex justify-content-center align-items-center text-center h-100">
                         <span>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt eveniet necessitatibus
-                            blanditiis est quibusdam libero reprehenderit perspiciatis expedita, harum fugit temporibus
-                            quam itaque in amet illum, consectetur modi aliquid culpa. Deserunt eveniet necessitatibus
-                            blanditiis est quibusdam libero reprehenderit perspiciatis expedita, harum fugit temporibus
-                            quam itaque in amet illum, consectetur modi aliquid culpa.
+                            <p>
+                                Meu objetivo é continuar evoluindo profissionalmente, participando de projetos
+                                desafiadores que me permitam desenvolver soluções criativas e eficientes. Busco crescer
+                                tanto tecnicamente quanto profissionalmente, sempre aprendendo novas tecnologias e
+                                expandindo minha experiência no desenvolvimento web. Sempre aprendendo coisas novas e
+                                superando novos desafios.
+                            </p>
                         </span>
                     </div>
                 </div>
@@ -486,35 +578,118 @@
                             aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#experienciasCarrossel" data-bs-slide-to="2"
                             aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#experienciasCarrossel" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
                     </div>
 
                     <div class="carousel-inner">
+
                         <div class="carousel-item active">
-                            <img src="https://s2-globorural.glbimg.com/JDyqJgTHUJ0XQ5vu4EB1FaugImU=/0x0:1600x900/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_afe5c125c3bb42f0b5ae633b58923923/internal_photos/bs/2025/f/a/9F6Qc5SOulVHcCzCzlWQ/campo-cuidado-pela-itograss-como-backup-para-times-credito-itograss-1-.jpg"
-                                class="d-block w-100" alt="...">
+                            <img src="/assets/src/img/royal.jpg" class="d-block w-100" alt="...">
+
                             <div class="carousel-caption mobile-caption">
-                                <h5>First slide label</h5>
-                                <p>Some representative placeholder content for the first slide.</p>
+
+                                <h5 class="desktop-text">
+                                    Desenvolvedor Full Stack Pleno • Jan. 2026 - Atual
+                                </h5>
+
+                                <h5 class="mobile-text">
+                                    Dev Full Stack Pleno <br>
+                                    2026 - Atual
+                                </h5>
+
+                                <p>
+                                    Atuação como Desenvolvedor Full Stack Pleno em ambiente ágil utilizando metodologia
+                                    SCRUM, sendo responsável pelo desenvolvimento e manutenção de sistemas internos no
+                                    back-end e front-end com PHP 5.3, Bootstrap 3 e 5, jQuery, AJAX e MySQL.
+                                    Participação ativa na criação de novas funcionalidades, reestruturação de telas
+                                    estratégicas, implementação de regras de negócio complexas e otimização de processos
+                                    internos. Também utilizei Git e GitHub para versionamento de código, controle de
+                                    versões e colaboração em equipe durante o ciclo de desenvolvimento das demandas.
+                                </p>
+
                             </div>
                         </div>
 
                         <div class="carousel-item">
-                            <img src="https://img.freepik.com/fotos-gratis/paisagem-de-prado-ensolarado_1112-134.jpg?semt=ais_incoming&w=740&q=80"
-                                class="d-block w-100" alt="...">
+                            <img src="/assets/src/img/royal.jpg" class="d-block w-100" alt="...">
+
                             <div class="carousel-caption mobile-caption">
-                                <h5>Second slide label</h5>
-                                <p>Some representative placeholder content for the second slide.</p>
+
+                                <h5 class="desktop-text">
+                                    Desenvolvedor Full Stack Jr. • Jan. 2024 - Dez. 2025
+                                </h5>
+
+                                <h5 class="mobile-text">
+                                    Dev Full Stack Jr. <br>
+                                    2024 - 2025
+                                </h5>
+
+                                <p>
+                                    Atuação como Desenvolvedor Full Stack Júnior, desenvolvendo e realizando manutenção
+                                    de funcionalidades no back-end e front-end utilizando PHP 5.3, Bootstrap 3 e 5,
+                                    jQuery, AJAX, MySQL e Git. Participação na criação de novas páginas, correções de
+                                    sistema e melhorias internas, contribuindo para a otimização de processos e evolução
+                                    das ferramentas utilizadas pela empresa.
+                                </p>
+
                             </div>
                         </div>
 
                         <div class="carousel-item">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAmyg0nxKOxqCJDt9CkdWUfWY7b2XOsf19DQ&s"
-                                class="d-block w-100" alt="...">
+                            <img src="/assets/src/img/cremesp.jpg" class="d-block w-100" alt="...">
+
                             <div class="carousel-caption mobile-caption">
-                                <h5>Third slide label</h5>
-                                <p>Some representative placeholder content for the third slide.</p>
+
+                                <h5 class="desktop-text">
+                                    Desenvolvedor de sistemas (Estagiário) • Jan. 2023 - Dez. 2023
+                                </h5>
+
+                                <h5 class="mobile-text">
+                                    Dev. Sistemas (Estágio) <br>
+                                    2023
+                                </h5>
+
+                                <p>
+                                    Atuando com metodologia SCRUM, participei da manutenção e desenvolvimento de
+                                    sistemas
+                                    e processos utilizando HTML, CSS, Bootstrap, JavaScript, PHP e Java. Também realizei
+                                    manutenção de tabelas e consultas em banco de dados MySQL utilizando PHPMyAdmin,
+                                    atendimento de demandas e chamados via Jira, criação de documentações técnicas e
+                                    suporte aos usuários na utilização das funcionalidades do sistema.
+                                </p>
+
                             </div>
                         </div>
+
+                        <div class="carousel-item">
+                            <img src="/assets/src/img/cremesp.jpg" class="d-block w-100" alt="...">
+
+                            <div class="carousel-caption mobile-caption">
+
+                                <h5 class="desktop-text">
+                                    Operador de Suporte Técnico (Estagiário) • Jan. 2022 - Dez. 2022
+                                </h5>
+
+                                <h5 class="mobile-text">
+                                    Suporte Técnico (Estágio) <br>
+                                    2022
+                                </h5>
+
+                                <p>
+                                    Atuação como Estagiário de Suporte Técnico, realizando atendimento diário de
+                                    chamados
+                                    através do Jira Service Desk, prestando suporte aos usuários, esclarecendo dúvidas
+                                    técnicas e auxiliando na resolução de problemas. Também fui responsável pela
+                                    manutenção de computadores e notebooks da empresa, instalação e configuração de
+                                    softwares como navegadores, pacote Office, antivírus e certificados digitais, além
+                                    da configuração e suporte de impressoras e dispositivos utilizados no ambiente
+                                    corporativo.
+                                </p>
+
+                            </div>
+                        </div>
+
                     </div>
 
                     <button class="carousel-control-prev" type="button" data-bs-target="#experienciasCarrossel"
@@ -545,13 +720,266 @@
 
             <div class="container my-4">
                 <div class="row g-3">
+
+                    <!-- AVANÇADOS -->
+                    <div class="col-12">
+                        <h3 class="mb-3">Avançado</h3>
+                    </div>
+
                     <div class="col-md-3">
                         <div class="quadrado d-flex flex-column align-items-center justify-content-between p-2 mb-4"
-                            data-aos="flip-up" data-aos-duration="1500" data-aos-delay="0">
-                            <h5 class="text-center">Quadrado 1</h5>
-                            <i class="fa-solid fa-star fa-2x"></i>
+                            data-aos="flip-up" data-aos-duration="1500">
+
+                            <h5 class="text-center">
+                                PHP
+                            </h5>
+
+                            <i class="fa-brands fa-php fa-2x"></i>
+
+                            <div class="barra-medicao d-flex justify-content-between w-100 mt-2">
+                                <div class="etapa avancado"></div>
+                                <div class="etapa avancado"></div>
+                                <div class="etapa avancado"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="quadrado d-flex flex-column align-items-center justify-content-between p-2 mb-4"
+                            data-aos="flip-up" data-aos-duration="1500" data-aos-delay="100">
+
+                            <h5 class="text-center">
+                                JavaScript
+                            </h5>
+
+                            <i class="fa-brands fa-js fa-2x"></i>
+
+                            <div class="barra-medicao d-flex justify-content-between w-100 mt-2">
+                                <div class="etapa avancado"></div>
+                                <div class="etapa avancado"></div>
+                                <div class="etapa avancado"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="quadrado d-flex flex-column align-items-center justify-content-between p-2 mb-4"
+                            data-aos="flip-up" data-aos-duration="1500" data-aos-delay="200">
+
+                            <h5 class="text-center">
+                                Bootstrap 5
+                            </h5>
+
+                            <i class="fa-brands fa-bootstrap fa-2x me-2"></i>
+
+                            <div class="barra-medicao d-flex justify-content-between w-100 mt-2">
+                                <div class="etapa avancado"></div>
+                                <div class="etapa avancado"></div>
+                                <div class="etapa avancado"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="quadrado d-flex flex-column align-items-center justify-content-between p-2 mb-4"
+                            data-aos="flip-up" data-aos-duration="1500" data-aos-delay="300">
+
+                            <h5 class="text-center">
+                                HTML5
+                            </h5>
+
+                            <i class="fa-brands fa-html5 fa-2x me-2"></i>
+
+                            <div class="barra-medicao d-flex justify-content-between w-100 mt-2">
+                                <div class="etapa avancado"></div>
+                                <div class="etapa avancado"></div>
+                                <div class="etapa avancado"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="quadrado d-flex flex-column align-items-center justify-content-between p-2 mb-4"
+                            data-aos="flip-up" data-aos-duration="1500" data-aos-delay="400">
+
+                            <h5 class="text-center">
+                                CSS3
+                            </h5>
+
+                            <i class="fa-brands fa-css3-alt fa-2x me-2"></i>
+
+                            <div class="barra-medicao d-flex justify-content-between w-100 mt-2">
+                                <div class="etapa avancado"></div>
+                                <div class="etapa avancado"></div>
+                                <div class="etapa avancado"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="quadrado d-flex flex-column align-items-center justify-content-between p-2 mb-4"
+                            data-aos="flip-up" data-aos-duration="1500" data-aos-delay="400">
+
+                            <h5 class="text-center">
+                                Inglês
+                            </h5>
+
+                            <img src="/assets/src/img/usa.png" class="icone-skill me-2">
+
+                            <div class="barra-medicao d-flex justify-content-between w-100 mt-2">
+                                <div class="etapa avancado"></div>
+                                <div class="etapa avancado"></div>
+                                <div class="etapa avancado"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- INTERMEDIÁRIOS -->
+                    <div class="col-12 mt-4">
+                        <h3 class="mb-3">Intermediário</h3>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="quadrado d-flex flex-column align-items-center justify-content-between p-2 mb-4"
+                            data-aos="flip-up" data-aos-duration="1500" data-aos-delay="500">
+
+                            <h5 class="text-center">
+                                MySQL
+                            </h5>
+
+                            <img src="/assets/src/img/database.png" class="icone-skill me-2">
+
+                            <div class="barra-medicao d-flex justify-content-between w-100 mt-2">
+                                <div class="etapa intermediario"></div>
+                                <div class="etapa intermediario"></div>
+                                <div class="etapa"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="quadrado d-flex flex-column align-items-center justify-content-between p-2 mb-4"
+                            data-aos="flip-up" data-aos-duration="1500" data-aos-delay="600">
+
+                            <h5 class="text-center">
+                                jQuery
+                            </h5>
+
+                            <i class="fa-brands fa-js fa-2x"></i>
+
+                            <div class="barra-medicao d-flex justify-content-between w-100 mt-2">
+                                <div class="etapa intermediario"></div>
+                                <div class="etapa intermediario"></div>
+                                <div class="etapa"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="quadrado d-flex flex-column align-items-center justify-content-between p-2 mb-4"
+                            data-aos="flip-up" data-aos-duration="1500" data-aos-delay="700">
+
+                            <h5 class="text-center">
+                                AJAX
+                            </h5>
+
+                            <i class="fa-solid fa-rotate fa-2x"></i>
+
+                            <div class="barra-medicao d-flex justify-content-between w-100 mt-2">
+                                <div class="etapa intermediario"></div>
+                                <div class="etapa intermediario"></div>
+                                <div class="etapa"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="quadrado d-flex flex-column align-items-center justify-content-between p-2 mb-4"
+                            data-aos="flip-up" data-aos-duration="1500" data-aos-delay="800">
+
+                            <h5 class="text-center">
+                                Git
+                            </h5>
+
+                            <i class="fa-brands fa-git-alt fa-2x"></i>
+
+                            <div class="barra-medicao d-flex justify-content-between w-100 mt-2">
+                                <div class="etapa intermediario"></div>
+                                <div class="etapa intermediario"></div>
+                                <div class="etapa"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="quadrado d-flex flex-column align-items-center justify-content-between p-2 mb-4"
+                            data-aos="flip-up" data-aos-duration="1500" data-aos-delay="400">
+
+                            <h5 class="text-center">
+                                Espanhol
+                            </h5>
+
+                            <img src="/assets/src/img/sp.png" class="icone-skill me-2">
+
+                            <div class="barra-medicao d-flex justify-content-between w-100 mt-2">
+                                <div class="etapa intermediario"></div>
+                                <div class="etapa intermediario"></div>
+                                <div class="etapa"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- INICIAL -->
+                    <div class="col-12 mt-4">
+                        <h3 class="mb-3">Inicial</h3>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="quadrado d-flex flex-column align-items-center justify-content-between p-2 mb-4"
+                            data-aos="flip-up" data-aos-duration="1500" data-aos-delay="1100">
+
+                            <h5 class="text-center">
+                                Python
+                            </h5>
+
+                            <i class="fa-brands fa-python fa-2x"></i>
+
                             <div class="barra-medicao d-flex justify-content-between w-100 mt-2">
                                 <div class="etapa inicial"></div>
+                                <div class="etapa"></div>
+                                <div class="etapa"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="quadrado d-flex flex-column align-items-center justify-content-between p-2 mb-4"
+                            data-aos="flip-up" data-aos-duration="1500" data-aos-delay="900">
+
+                            <h5 class="text-center">
+                                React
+                            </h5>
+
+                            <i class="fa-brands fa-react fa-2x"></i>
+
+                            <div class="barra-medicao d-flex justify-content-between w-100 mt-2">
+                                <div class="etapa intermediario"></div>
+                                <div class="etapa"></div>
+                                <div class="etapa"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="quadrado d-flex flex-column align-items-center justify-content-between p-2 mb-4"
+                            data-aos="flip-up" data-aos-duration="1500" data-aos-delay="900">
+
+                            <h5 class="text-center">
+                                Typescript
+                            </h5>
+
+                            <i class="fa-solid fa-italic fa-2x"></i>
+
+                            <div class="barra-medicao d-flex justify-content-between w-100 mt-2">
+                                <div class="etapa intermediario"></div>
                                 <div class="etapa"></div>
                                 <div class="etapa"></div>
                             </div>
@@ -560,11 +988,16 @@
 
                     <div class="col-md-3">
                         <div class="quadrado d-flex flex-column align-items-center justify-content-between p-2 mb-4"
-                            data-aos="flip-up" data-aos-duration="1500" data-aos-delay="200">
-                            <h5 class="text-center">Quadrado 2</h5>
-                            <i class="fa-solid fa-star fa-2x"></i>
+                            data-aos="flip-up" data-aos-duration="1500" data-aos-delay="1000">
+
+                            <h5 class="text-center">
+                                Java
+                            </h5>
+
+                            <i class="fa-brands fa-java fa-2x"></i>
+
                             <div class="barra-medicao d-flex justify-content-between w-100 mt-2">
-                                <div class="etapa inicial"></div>
+                                <div class="etapa intermediario"></div>
                                 <div class="etapa"></div>
                                 <div class="etapa"></div>
                             </div>
@@ -574,28 +1007,21 @@
                     <div class="col-md-3">
                         <div class="quadrado d-flex flex-column align-items-center justify-content-between p-2 mb-4"
                             data-aos="flip-up" data-aos-duration="1500" data-aos-delay="400">
-                            <h5 class="text-center">Quadrado 3</h5>
-                            <i class="fa-solid fa-star fa-2x"></i>
+
+                            <h5 class="text-center">
+                                Francês
+                            </h5>
+
+                            <img src="/assets/src/img/fr.png" class="icone-skill me-2">
+
                             <div class="barra-medicao d-flex justify-content-between w-100 mt-2">
                                 <div class="etapa intermediario"></div>
-                                <div class="etapa intermediario"></div>
+                                <div class="etapa"></div>
                                 <div class="etapa"></div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-3">
-                        <div class="quadrado d-flex flex-column align-items-center justify-content-between p-2"
-                            data-aos="flip-up" data-aos-duration="1500" data-aos-delay="600">
-                            <h5 class="text-center">Quadrado 4</h5>
-                            <i class="fa-solid fa-star fa-2x"></i>
-                            <div class="barra-medicao d-flex justify-content-between w-100 mt-2">
-                                <div class="etapa avancado"></div>
-                                <div class="etapa avancado"></div>
-                                <div class="etapa avancado"></div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -605,7 +1031,7 @@
         <!-- HABILIDADES -->
         <div class="my-4" id="habilidades">
             <div class="text-center" data-aos="fade-right">
-                <h2>Habilidades</h2>
+                <h2>Soft Skills</h2>
 
                 <hr>
             </div>
@@ -776,6 +1202,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
 
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>

@@ -1,5 +1,5 @@
 /*
- * SECTION: Variáveis CSS
+ * SECTION: Variï¿½veis CSS
  * Define as cores e outras propriedades que podem ser alteradas.
  */
 :root {
@@ -54,7 +54,7 @@ a {
     color: #004BA8;
 }
 
-/* Força carousel-item a ter altura da imagem */
+/* Forï¿½a carousel-item a ter altura da imagem */
 .carousel-item img {
     width: 100%;
     height: 400px;
@@ -62,7 +62,7 @@ a {
     display: block;
 }
 
-/* Títulos opcionais */
+/* Tï¿½tulos opcionais */
 .titulo {
     font-weight: 500;
 }
@@ -84,8 +84,11 @@ a {
     border-radius: 25px;
     background-color: var(--cor-fundo-claro);
     box-sizing: border-box;
-    width: 100vw;
-    height: 90vh;
+    width: 100%;
+    /* Melhor que 100vw para evitar rolagem horizontal */
+    min-height: 90vh;
+    /* Permite que o container cresÃ§a se o texto for muito longo no celular */
+    height: auto;
 }
 
 #links a {
@@ -115,7 +118,7 @@ a i:hover {
 }
 
 /*
- * SECTION: Conteúdo principal e layout
+ * SECTION: Conteï¿½do principal e layout
  */
 body>.conteudo-principal {
     position: relative;
@@ -142,7 +145,7 @@ body>.conteudo-principal {
 }
 
 /*
- * SECTION: Componentes de projetos/cartões
+ * SECTION: Componentes de projetos/cartï¿½es
  */
 .cartaoProjeto {
     border: 2px solid var(--cor-borda-claro);
@@ -164,6 +167,28 @@ body>.conteudo-principal {
     border-top: 2px solid var(--cor-borda-claro);
     font-size: 2rem;
     padding: 0.6rem;
+    overflow-x: auto; /* Habilita a rolagem horizontal automÃ¡tica */
+    overflow-y: hidden; /* Previne o surgimento de scroll vertical acidental */
+    white-space: nowrap; /* Garante que os elementos fiquem na mesma linha */
+}
+
+/* Evita que os Ã­cones dentro do flexbox encolham quando a tela for pequena */
+.linguagensCard .d-flex > * {
+    flex-shrink: 0; 
+}
+
+/* PersonalizaÃ§Ã£o opcional da barra de rolagem (deixa ela mais discreta) */
+.linguagensCard::-webkit-scrollbar {
+    height: 6px;
+}
+
+.linguagensCard::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.linguagensCard::-webkit-scrollbar-thumb {
+    background: var(--cor-menu);
+    border-radius: 10px;
 }
 
 .projetoProfissional-card {
@@ -185,6 +210,74 @@ body>.conteudo-principal {
 .projetoProfissional-linguagens {
     border-top: 2px solid var(--cor-borda-claro);
     padding: 0.6rem;
+    font-size: 1.5rem;
+}
+
+.projetoProfissional-linguagens img {
+    width: 1em;
+    height: 1em;
+    object-fit: contain;
+}
+
+.carousel-indicators button {
+    background-color: #000 !important;
+}
+
+.carousel-indicators .active {
+    background-color: #000 !important;
+    opacity: 1;
+}
+
+.icone-skill {
+    width: 2em;
+    height: 2em;
+    object-fit: contain;
+}
+
+.mobile-text {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .desktop-text {
+        display: none;
+    }
+
+    .mobile-text {
+        display: block;
+        font-size: 1rem;
+        line-height: 1.3;
+    }
+
+    .mobile-caption {
+        padding: 10px;
+        bottom: 10px;
+    }
+
+    .mobile-caption p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        max-height: 120px;
+        overflow-y: auto;
+    }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: brightness(0);
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+.linguagensCard img {
+    width: 1em;
+    height: 1em;
+    object-fit: contain;
 }
 
 .progresso-card-curso {
@@ -238,7 +331,7 @@ body>.conteudo-principal {
 }
 
 /*
- * SECTION: Componentes de navegação e carrossel
+ * SECTION: Componentes de navegaï¿½ï¿½o e carrossel
  */
 .carousel-item {
     position: relative;
@@ -288,7 +381,7 @@ body>.conteudo-principal {
 }
 
 /*
- * SECTION: Imagens e ícones
+ * SECTION: Imagens e ï¿½cones
  */
 .circulo {
     width: 8rem;
@@ -298,8 +391,13 @@ body>.conteudo-principal {
 }
 
 .imagem-fixa {
-    width: 25rem;
-    height: 150px;
+    width: 100%;
+    /* Ocupa atÃ© 100% do espaÃ§o disponÃ­vel */
+    max-width: 35rem;
+    /* Trava no tamanho mÃ¡ximo original para desktop */
+    height: auto;
+    /* MantÃ©m a proporÃ§Ã£o da imagem */
+    max-height: 15rem;
     object-fit: contain;
 }
 
@@ -310,9 +408,11 @@ body>.conteudo-principal {
 }
 
 .projetoProfissional-imagem-pequena {
-    width: 100px;
-    height: 75px;
-    object-fit: contain;
+    width: 100%;
+    max-width: 23rem;
+    height: auto;
+    max-height: 15rem;
+    object-fit: cover;
 }
 
 .iconesFooter {
@@ -403,15 +503,18 @@ body>.conteudo-principal {
 
 @media (max-width: 1433px) {
     #indiceNav {
-        font-size: 0.7rem;
+        display: flex;
+        flex-direction: column;
+        /* Empilha os links no celular */
+        align-items: center;
+        gap: 0.8rem;
     }
 
-    #indiceNav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: .5rem;
-        margin-top: 1rem;
+    .tracker-item {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        /* Ãrea de toque maior para celular */
     }
 
 
@@ -420,7 +523,8 @@ body>.conteudo-principal {
         border-radius: 25px;
         background-color: var(--cor-fundo-claro);
         box-sizing: border-box;
-        width: 100vw;
-        height: 88vh;
+        width: 100%;
+        min-height: 88vh;
+        height: auto;
     }
 }

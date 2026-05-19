@@ -1,11 +1,7 @@
 $(document).ready(function () {
-    // Inicializa��es
+    // Inicializa��es
     AOS.init();
-    tippy('#links a', {
-        placement: 'bottom',
-        arrow: true,
-        animation: 'fade',
-    });
+
     particlesJS.load('particles-js', 'assets/src/particlesjs-config.json');
     updateParticlesHeight();
 
@@ -30,15 +26,21 @@ $(document).ready(function () {
         }, 100);
     });
 
-    // Sequ�ncia de anima��o inicial
+    tippy('[data-tippy-content]', {
+        placement: 'bottom',
+        arrow: true,
+        animation: 'fade',
+    });
+
+    // Sequ�ncia de anima��o inicial
     setTimeout(() => {
         new Typed("#nome", {
-            strings: ["Seu nome"],
+            strings: ["Henrique Freitas"],
             typeSpeed: 20,
             showCursor: false,
             onComplete: function () {
                 new Typed("#trabalho", {
-                    strings: ["Trabalho"],
+                    strings: ["Desenvolvedor Full Stack"],
                     typeSpeed: 20,
                     showCursor: false,
                     onComplete: function () {
@@ -49,7 +51,7 @@ $(document).ready(function () {
         });
     }, 500);
 
-    // Configura��es das part�culas para modo claro e escuro
+    // Configura��es das part�culas para modo claro e escuro
     const particlesConfigClaro = {
         "particles": {
             "number": { "value": 35, "density": { "enable": true, "value_area": 800 } },
@@ -96,7 +98,7 @@ $(document).ready(function () {
         "retina_detect": true
     };
 
-    // Fun��es auxiliares
+    // Fun��es auxiliares
     function animarIcones() {
         const $icones = $('#links a');
         let atraso = 0;
@@ -119,7 +121,7 @@ $(document).ready(function () {
     function digitarDescricao() {
         new Typed("#descricao", {
             strings: [
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque voluptatum nihil inventore modi accusantium voluptatibus fugiat distinctio. Cumque error maiores vitae porro, optio impedit soluta, autem distinctio vel dicta rem?"
+                "Olá! Sou o Henrique, formado em Ciência da Computação pela USJT, sou um desenvolvedor full stack focado na criação de soluções eficientes para problemas reais. Tenho experiência no desenvolvimento de sistemas internos, automação de processos e reestruturação de interfaces utilizando PHP, MySQL, JavaScript, jQuery, AJAX e Bootstrap. Atuo tanto em projetos corporativos quanto pessoais, desenvolvendo aplicações funcionais, responsivas e voltadas para otimização de processos. Sou movido por desafios técnicos, aprendizado contínuo e pela transformação de ideias em soluções."
             ],
             typeSpeed: 25,
             showCursor: false
