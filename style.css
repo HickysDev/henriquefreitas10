@@ -14,7 +14,7 @@
 
 .modo-claro {
     /* Modo Claro */
-    --cor-fundo-claro: #fafafa;
+    --cor-fundo-claro: #dbdbdb;
     --cor-texto-claro: #07070A;
     --cor-borda-claro: #07070A;
     --cor-fundo-elemento-claro: #e9e9e9;
@@ -52,6 +52,12 @@ hr {
 
 a {
     color: #004BA8;
+}
+
+#tracker {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
 }
 
 /* For�a carousel-item a ter altura da imagem */
@@ -167,14 +173,17 @@ body>.conteudo-principal {
     border-top: 2px solid var(--cor-borda-claro);
     font-size: 2rem;
     padding: 0.6rem;
-    overflow-x: auto; /* Habilita a rolagem horizontal automática */
-    overflow-y: hidden; /* Previne o surgimento de scroll vertical acidental */
-    white-space: nowrap; /* Garante que os elementos fiquem na mesma linha */
+    overflow-x: auto;
+    /* Habilita a rolagem horizontal automática */
+    overflow-y: hidden;
+    /* Previne o surgimento de scroll vertical acidental */
+    white-space: nowrap;
+    /* Garante que os elementos fiquem na mesma linha */
 }
 
 /* Evita que os ícones dentro do flexbox encolham quando a tela for pequena */
-.linguagensCard .d-flex > * {
-    flex-shrink: 0; 
+.linguagensCard .d-flex>* {
+    flex-shrink: 0;
 }
 
 /* Personalização opcional da barra de rolagem (deixa ela mais discreta) */
@@ -239,6 +248,20 @@ body>.conteudo-principal {
 }
 
 @media (max-width: 768px) {
+
+    #tracker {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+    }
+
+    /* evita conteúdo ficar escondido atrás da navbar */
+    body {
+        padding-top: 60px;
+        /* ajuste conforme altura da navbar */
+    }
 
     .desktop-text {
         display: none;
@@ -370,9 +393,20 @@ body>.conteudo-principal {
     transition: background-color 0.3s, color 0.3s;
 }
 
+.descricao-animada {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.descricao-animada.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .tracker-item.active {
     background-color: #3E78B2;
-    color: #fafafa;
+    color: #fafafa !important;
     font-weight: bold;
 }
 
@@ -381,13 +415,35 @@ body>.conteudo-principal {
 }
 
 /*
- * SECTION: Imagens e �cones
+ * SECTION: Soft Skills
  */
+
 .circulo {
     width: 8rem;
     height: 8rem;
     border-radius: 50%;
-    display: inline-block;
+    background: linear-gradient(135deg, #0d6efd, #4ea1ff);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.circulo i {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.circulo:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+.titulo {
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .imagem-fixa {
@@ -501,7 +557,15 @@ body>.conteudo-principal {
     }
 }
 
-@media (max-width: 1433px) {
+.navbar-toggler {
+    border-color: var(--cor-texto-claro);
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+@media (max-width: 768px) {
     #indiceNav {
         display: flex;
         flex-direction: column;

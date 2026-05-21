@@ -23,6 +23,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <!-- Import Typed.js -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
@@ -41,43 +43,42 @@
     <div id="particles-js"></div>
 
 
-    <nav id="tracker" class="tracker-nav sticky-top d-none d-lg-block">
-        <div class="d-flex justify-content-between align-items-center flex-wrap">
+    <nav id="tracker" class="tracker-nav navbar navbar-expand-lg sticky-top">
 
-            <div class="flex-shrink-0">
-                <span>Henrique Freitas</span>
-            </div>
+        <div class="container-fluid d-flex justify-content-between align-items-center">
 
-            <div id="indiceNav" class="mx-auto">
-                <a href="#inicio" class="tracker-item">Início</a>
-                <a href="#projetosProfissionais" class="tracker-item px-2">Projetos Profissionais</a>
-                <a href="#projetosPessoais" class="tracker-item px-2">Projetos Pessoais</a>
-                <a href="#sobreMim" class="tracker-item px-2">Sobre mim</a>
-                <a href="#objetivosEstudos" class="tracker-item px-2">Objetivos e Estudos</a>
-                <a href="#experiencias" class="tracker-item px-2">Experiências</a>
-                <a href="#conhecimentos" class="tracker-item px-2">Conhecimentos</a>
-                <a href="#habilidades" class="tracker-item px-2">Soft Skills</a>
-                <a href="#cursosCertificacoes" class="tracker-item px-2">Cursos e Certificações</a>
-            </div>
+            <!-- Nome -->
+            <span class="navbar-brand mb-0" style="color: #FFFF">Henrique Freitas</span>
 
-            <div class="d-flex gap-3 align-items-center flex-shrink-0">
-                <div>
-                    <i class="fa-solid fa-moon toggleModoEscuro iconeModo"></i>
+            <!-- Botão mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuTracker"
+                aria-controls="menuTracker" aria-expanded="false" aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- MENU -->
+            <div class="collapse navbar-collapse" id="menuTracker">
+
+                <div id="indiceNav" class="navbar-nav mx-auto text-center">
+
+                    <a href="#inicio" class="nav-link tracker-item">Início</a>
+                    <a href="#projetosProfissionais" class="nav-link tracker-item">Projetos Profissionais</a>
+                    <a href="#projetosPessoais" class="nav-link tracker-item">Projetos Pessoais</a>
+                    <a href="#sobreMim" class="nav-link tracker-item">Sobre mim</a>
+                    <a href="#objetivosEstudos" class="nav-link tracker-item">Objetivos e Estudos</a>
+                    <a href="#experiencias" class="nav-link tracker-item">Experiências</a>
+                    <a href="#conhecimentos" class="nav-link tracker-item">Conhecimentos</a>
+                    <a href="#habilidades" class="nav-link tracker-item">Soft Skills</a>
+                    <a href="#cursosCertificacoes" class="nav-link tracker-item">Cursos e Certificações</a>
+
                 </div>
-            </div>
-        </div>
-    </nav>
 
-
-    <nav id="tracker-mobile" class="tracker-nav sticky-top d-lg-none">
-        <div class="d-flex justify-content-between align-items-center">
-            <div>
-                <span>Henrique Freitas</span>
-            </div>
-            <div class="d-flex gap-3 align-items-center">
-                <div>
-                    <i class="fa-solid fa-moon toggleModoEscuro iconeModo"></i>
+                <!-- Ícones direita -->
+                <div class="d-flex gap-3 align-items-center">
+                    <i class="fa-solid fa-moon toggleModoEscuro iconeModo" style="cursor: pointer;"></i>
                 </div>
+
             </div>
         </div>
     </nav>
@@ -96,15 +97,19 @@
                 <h3 id="trabalho"></h3>
 
                 <div class="d-flex gap-3" id="links">
-                    <a href="#" data-tippy-content="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#" data-tippy-content="E-mail"><i class="fa-solid fa-envelope"></i></a>
-                    <a href="#" data-tippy-content="GitHub"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" data-tippy-content="Currículo"><i class="fa-solid fa-file-pdf"></i></a>
+                    <a href="https://linkedin.com/in/henrique-de-freitas-pereira-hickys" target="_blank"
+                        data-tippy-content="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="mailto:henrique10.fp@hotmail.com" data-tippy-content="E-mail"><i
+                            class="fa-solid fa-envelope"></i></a>
+                    <a href="https://github.com/HickysDev" target="_blank" data-tippy-content="GitHub"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="https://media.licdn.com/dms/image/v2/D4D2DAQEuu9o3eFPOsw/profile-treasury-document-cover-images_1280/profile-treasury-document-cover-images_1280/0/1730341987817?e=1779930000&v=beta&t=xE0haiz8H8fsnrSDGNw0fkXaBgzvJD2HRc643SOzdxs"
+                        target="_blank" data-tippy-content="Currículo"><i class="fa-solid fa-file-pdf"></i></a>
                 </div>
 
                 <hr id="hrResumo">
 
-                <span id="descricao" style="text-align: justify;"></span>
+                <p id="descricao" style="text-align: justify;" class="descricao-animada"></p>
             </div>
 
             <div class="w-50 d-flex justify-content-center align-items-center d-none d-sm-block imgResumo">
@@ -1029,52 +1034,199 @@
         &nbsp;
 
         <!-- HABILIDADES -->
-        <div class="my-4" id="habilidades">
-            <div class="text-center" data-aos="fade-right">
-                <h2>Soft Skills</h2>
+        <!-- Bootstrap Icons -->
 
-                <hr>
+        <!-- HABILIDADES -->
+        <div class="my-5" id="habilidades">
+
+            <div class="text-center mb-5" data-aos="fade-right">
+                <h2>Soft Skills</h2>
+                <hr class="w-25 mx-auto">
             </div>
 
+            <div class="container">
+                <div class="row justify-content-center text-center">
 
-            <div class="container my-4">
-                <div class="row text-center">
-                    <!-- Círculo 1 -->
-                    <div class="col-md-3 mb-4">
-                        <div class="mb-4" data-aos="zoom-in">
-                            <div class="circulo bg-primary mx-auto"></div>
-                            <div class="titulo mt-2">Título 1</div>
-                        </div>
+                    <!-- Comunicação -->
+                    <div class="col-6 col-md-3 mb-4">
+                        <div data-aos="zoom-in">
 
-                        <div data-aos="zoom-in" data-aos-delay="600">
-                            <div class="circulo bg-primary mx-auto"></div>
-                            <div class="titulo mt-2">Título 1</div>
-                        </div>
-                    </div>
+                            <div class="circulo mx-auto">
+                                <i class="bi bi-chat-dots-fill"></i>
+                            </div>
 
-                    <!-- Círculo 2 -->
-                    <div class="col-md-3 mb-4">
-                        <div class="mb-4" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="circulo bg-primary mx-auto"></div>
-                            <div class="titulo mt-2">Título 1</div>
+                            <div class="titulo mt-3">
+                                Comunicação
+                            </div>
+
                         </div>
                     </div>
 
-                    <!-- Círculo 3 -->
-                    <div class="col-md-3 mb-4">
-                        <div class="mb-4" data-aos="zoom-in" data-aos-delay="400">
-                            <div class="circulo bg-primary mx-auto"></div>
-                            <div class="titulo mt-2">Título 1</div>
+                    <!-- Resolução de Problemas -->
+                    <div class="col-6 col-md-3 mb-4">
+                        <div data-aos="zoom-in" data-aos-delay="100">
+
+                            <div class="circulo mx-auto">
+                                <i class="bi bi-lightbulb-fill"></i>
+                            </div>
+
+                            <div class="titulo mt-3">
+                                Resolução de Problemas
+                            </div>
+
                         </div>
                     </div>
 
-                    <!-- Círculo 4 -->
-                    <div class="col-md-3 mb-4">
-                        <div class="mb-4" data-aos="zoom-in" data-aos-delay="600">
-                            <div class="circulo bg-primary mx-auto"></div>
-                            <div class="titulo mt-2">Título 1</div>
+                    <!-- Trabalho em Equipe -->
+                    <div class="col-6 col-md-3 mb-4">
+                        <div data-aos="zoom-in" data-aos-delay="200">
+
+                            <div class="circulo mx-auto">
+                                <i class="bi bi-people-fill"></i>
+                            </div>
+
+                            <div class="titulo mt-3">
+                                Trabalho em Equipe
+                            </div>
+
                         </div>
                     </div>
+
+                    <!-- Adaptabilidade -->
+                    <div class="col-6 col-md-3 mb-4">
+                        <div data-aos="zoom-in" data-aos-delay="300">
+
+                            <div class="circulo mx-auto">
+                                <i class="bi bi-arrow-repeat"></i>
+                            </div>
+
+                            <div class="titulo mt-3">
+                                Adaptabilidade
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Pensamento Analítico -->
+                    <div class="col-6 col-md-3 mb-4">
+                        <div data-aos="zoom-in">
+
+                            <div class="circulo mx-auto">
+                                <i class="bi bi-graph-up-arrow"></i>
+                            </div>
+
+                            <div class="titulo mt-3">
+                                Pensamento Analítico
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Organização -->
+                    <div class="col-6 col-md-3 mb-4">
+                        <div data-aos="zoom-in" data-aos-delay="100">
+
+                            <div class="circulo mx-auto">
+                                <i class="bi bi-kanban-fill"></i>
+                            </div>
+
+                            <div class="titulo mt-3">
+                                Organização
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Aprendizado Contínuo -->
+                    <div class="col-6 col-md-3 mb-4">
+                        <div data-aos="zoom-in" data-aos-delay="200">
+
+                            <div class="circulo mx-auto">
+                                <i class="bi bi-book-half"></i>
+                            </div>
+
+                            <div class="titulo mt-3">
+                                Aprendizado Contínuo
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Proatividade -->
+                    <div class="col-6 col-md-3 mb-4">
+                        <div data-aos="zoom-in" data-aos-delay="300">
+
+                            <div class="circulo mx-auto">
+                                <i class="bi bi-rocket-takeoff-fill"></i>
+                            </div>
+
+                            <div class="titulo mt-3">
+                                Proatividade
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Atenção aos Detalhes -->
+                    <div class="col-6 col-md-3 mb-4">
+                        <div data-aos="zoom-in">
+
+                            <div class="circulo mx-auto">
+                                <i class="bi bi-search"></i>
+                            </div>
+
+                            <div class="titulo mt-3">
+                                Atenção aos Detalhes
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Gestão de Tempo -->
+                    <div class="col-6 col-md-3 mb-4">
+                        <div data-aos="zoom-in" data-aos-delay="100">
+
+                            <div class="circulo mx-auto">
+                                <i class="bi bi-clock-fill"></i>
+                            </div>
+
+                            <div class="titulo mt-3">
+                                Gestão de Tempo
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Criatividade -->
+                    <div class="col-6 col-md-3 mb-4">
+                        <div data-aos="zoom-in" data-aos-delay="200">
+
+                            <div class="circulo mx-auto">
+                                <i class="bi bi-palette-fill"></i>
+                            </div>
+
+                            <div class="titulo mt-3">
+                                Criatividade
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Foco -->
+                    <div class="col-6 col-md-3 mb-4">
+                        <div data-aos="zoom-in" data-aos-delay="300">
+
+                            <div class="circulo mx-auto">
+                                <i class="bi bi-bullseye"></i>
+                            </div>
+
+                            <div class="titulo mt-3">
+                                Foco
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -1094,11 +1246,10 @@
                 <div class="col-md-3 mb-4">
                     <div class="card card-curso" data-aos="zoom-out-up">
                         <div class="card-header text-center titulo-card-curso">
-                            <span>Titulo do Curso</span>
+                            <span>UX Design Rápido e Prático</span>
                         </div>
                         <div class="card-body p-0 img-card-curso">
-                            <img src="https://img-c.udemycdn.com/course/480x270/5391150_d350.jpg" alt="Imagem do Curso"
-                                class="img-fluid">
+                            <img src="assets/src/img/CursoUX.png" alt="Imagem do Curso" class="img-fluid">
                         </div>
                         <div class="card-footer progresso-card-curso">
                             <div class="text-center descricaoProgresso">100%</div>
@@ -1109,7 +1260,7 @@
                 <div class="col-md-3 mb-4">
                     <div class="card card-curso" data-aos="zoom-out-up" data-aos-delay="200">
                         <div class="card-header text-center titulo-card-curso">
-                            <span>Titulo do Curso</span>
+                            <span>Formação Front-end - HTML, CSS, JavaScript, React e +</span>
                         </div>
                         <div class="card-body p-0 img-card-curso">
                             <img src="https://img-c.udemycdn.com/course/480x270/5391150_d350.jpg" alt="Imagem do Curso"
@@ -1124,15 +1275,14 @@
                 <div class="col-md-3 mb-4">
                     <div class="card card-curso" data-aos="zoom-out-up" data-aos-delay="400">
                         <div class="card-header text-center titulo-card-curso">
-                            <span>Titulo do Curso</span>
+                            <span>Aprenda Javascript, jQuery, Ajax e Json do Zero na Prática</span>
                         </div>
                         <div class="card-body p-0 img-card-curso">
-                            <img src="https://media.licdn.com/dms/image/v2/D4D2DAQEIqfeYW4JeQg/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1709165712786?e=1758736800&v=beta&t=0ispnuhq-gVgEyHtFS7uzLL2fTw61NMlfZruXr8-xaU"
-                                alt="Imagem do Curso" class="img-fluid">
+                            <img src="assets/src/img/cursoJs.png" alt="Imagem do Curso" class="img-fluid">
                         </div>
                         <div class="card-footer progresso-card-curso">
                             <div class="text-center">
-                                <i class="fa-solid fa-medal"></i>
+                                100%
                             </div>
                         </div>
                     </div>
@@ -1141,17 +1291,30 @@
                 <div class="col-md-3 mb-4">
                     <div class="card card-curso" data-aos="zoom-out-up" data-aos-delay="600">
                         <div class="card-header text-center titulo-card-curso">
-                            <span>Titulo do Curso</span>
+                            <span>Curso Completo de PHP 7</span>
                         </div>
                         <div class="card-body p-0 img-card-curso">
-                            <img src="https://img-c.udemycdn.com/course/480x270/5391150_d350.jpg" alt="Imagem do Curso"
-                                class="img-fluid">
+                            <img src="assets/src/img/cursoPhp.png" alt="Imagem do Curso" class="img-fluid">
                         </div>
                         <div class="card-footer progresso-card-curso">
 
                             <div class="text-center descricaoProgresso">
-                                (Em andamento)
+                                100%
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                    <div class="card card-curso" data-aos="zoom-out-up">
+                        <div class="card-header text-center titulo-card-curso">
+                            <span>Laravel 11 & 12: Framework, Ecossistema e Projetos Web</span>
+                        </div>
+                        <div class="card-body p-0 img-card-curso">
+                            <img src="assets/src/img/cursoLaravel.png" alt="Imagem do Curso" class="img-fluid">
+                        </div>
+                        <div class="card-footer progresso-card-curso">
+                            <div class="text-center descricaoProgresso">(Em andamento)</div>
                         </div>
                     </div>
                 </div>
@@ -1162,15 +1325,17 @@
     <footer>
         <div id="footerPag" class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2">
             <div class="iconesFooterNormal">
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://github.com/HickysDev" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:henrique10.fp@hotmail.com"><i class="fa-solid fa-envelope"></i></a>
             </div>
 
             <div class="iconesFooterMobile">
-                <a href="#"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-solid fa-file-pdf"></i></a>
+                <a href="https://github.com/HickysDev" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:henrique10.fp@hotmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/henrique-de-freitas-pereira-hickys" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://media.licdn.com/dms/image/v2/D4D2DAQEuu9o3eFPOsw/profile-treasury-document-cover-images_1280/profile-treasury-document-cover-images_1280/0/1730341987817?e=1779930000&v=beta&t=xE0haiz8H8fsnrSDGNw0fkXaBgzvJD2HRc643SOzdxs"
+                    target="_blank"><i class="fa-solid fa-file-pdf"></i></a>
             </div>
 
             <div class="d-flex align-items-center gap-2">
@@ -1186,8 +1351,10 @@
             </div>
 
             <div class="iconesFooterNormal">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-solid fa-file-pdf"></i></a>
+                <a href="https://linkedin.com/in/henrique-de-freitas-pereira-hickys" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://media.licdn.com/dms/image/v2/D4D2DAQEuu9o3eFPOsw/profile-treasury-document-cover-images_1280/profile-treasury-document-cover-images_1280/0/1730341987817?e=1779930000&v=beta&t=xE0haiz8H8fsnrSDGNw0fkXaBgzvJD2HRc643SOzdxs"
+                    target="_blank"><i class="fa-solid fa-file-pdf"></i></a>
             </div>
         </div>
     </footer>

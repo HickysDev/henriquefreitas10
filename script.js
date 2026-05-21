@@ -32,23 +32,30 @@ $(document).ready(function () {
         animation: 'fade',
     });
 
-    // Sequ�ncia de anima��o inicial
     setTimeout(() => {
-        new Typed("#nome", {
-            strings: ["Henrique Freitas"],
-            typeSpeed: 20,
-            showCursor: false,
-            onComplete: function () {
-                new Typed("#trabalho", {
-                    strings: ["Desenvolvedor Full Stack"],
-                    typeSpeed: 20,
-                    showCursor: false,
-                    onComplete: function () {
-                        animarIcones();
-                    }
+
+        const nome = document.querySelector("#nome");
+        const trabalho = document.querySelector("#trabalho");
+
+        nome.innerText = "Henrique Freitas";
+        nome.classList.add("animate__animated", "animate__fadeInDown");
+
+        nome.addEventListener("animationend", function handler() {
+
+            nome.removeEventListener("animationend", handler);
+
+
+                trabalho.innerText = "Desenvolvedor Full Stack";
+                trabalho.classList.add("animate__animated", "animate__fadeInDown");
+
+                trabalho.addEventListener("animationend", function handler2() {
+                    trabalho.removeEventListener("animationend", handler2);
+                    animarIcones();
                 });
-            }
+
+
         });
+
     }, 500);
 
     // Configura��es das part�culas para modo claro e escuro
@@ -119,13 +126,19 @@ $(document).ready(function () {
     }
 
     function digitarDescricao() {
-        new Typed("#descricao", {
-            strings: [
-                "Olá! Sou o Henrique, formado em Ciência da Computação pela USJT, sou um desenvolvedor full stack focado na criação de soluções eficientes para problemas reais. Tenho experiência no desenvolvimento de sistemas internos, automação de processos e reestruturação de interfaces utilizando PHP, MySQL, JavaScript, jQuery, AJAX e Bootstrap. Atuo tanto em projetos corporativos quanto pessoais, desenvolvendo aplicações funcionais, responsivas e voltadas para otimização de processos. Sou movido por desafios técnicos, aprendizado contínuo e pela transformação de ideias em soluções."
-            ],
-            typeSpeed: 25,
-            showCursor: false
-        });
+
+        const el = document.querySelector("#descricao");
+
+        const texto = "Olá! Sou o Henrique, formado em Ciência da Computação pela USJT, sou um desenvolvedor full stack focado na criação de soluções eficientes para problemas reais. Tenho experiência no desenvolvimento de sistemas internos, automação de processos e reestruturação de interfaces utilizando PHP, MySQL, JavaScript, jQuery, AJAX e Bootstrap. Atuo tanto em projetos corporativos quanto pessoais, desenvolvendo aplicações funcionais, responsivas e voltadas para otimização de processos. Sou movido por desafios técnicos, aprendizado contínuo e pela transformação de ideias em soluções.";
+
+        el.innerText = texto;
+
+        // força reflow leve antes da animação
+        void el.offsetWidth;
+
+        setTimeout(() => {
+            el.classList.add("show");
+        }, 100);
     }
 
     function updateParticlesHeight() {
